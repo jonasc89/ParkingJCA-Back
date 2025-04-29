@@ -1,0 +1,11 @@
+// .sequelizerc
+const path = require('path');
+const base = path.resolve('./src');
+
+module.exports = {
+  'config':          path.join(base, 'config', 'config.js'),
+  'models-path':     path.join(base, 'models'),
+  'seeders-path':    path.join(base, 'seeders'),
+  'migrations-path': path.join(base, 'migrations')
+};
+

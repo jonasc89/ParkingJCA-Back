@@ -7,9 +7,11 @@ export class User extends Model {
 }
 
 User.init({
-  name:      { type: DataTypes.STRING, allowNull:false },
-  email:     { type: DataTypes.STRING, allowNull:false, unique:true },
-  password:  { type: DataTypes.STRING(60), allowNull:false }
+  name: { type: DataTypes.STRING, allowNull:false },
+  email:{ type: DataTypes.STRING, allowNull:false, unique:true },
+  password:{ type: DataTypes.STRING(60), allowNull:false }
 }, { sequelize, modelName:'User' });
 
-User.beforeCreate(async u => { u.password = await bcrypt.hash(u.password,10); });
+User.beforeCreate(async u => {
+  u.password = await bcrypt.hash(u.password, 10);
+});
