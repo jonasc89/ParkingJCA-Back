@@ -1,8 +1,0 @@
-DB_PORT=3306
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=12345
-DB_NAME=parkingjca
-JWT_SECRET=claveSecreta123
-JWT_EXPIRES=2h
-API_PORT=4000
