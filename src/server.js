@@ -1,5 +1,5 @@
 import 'dotenv/config';
 import app from './app.js';
 
-app.listen(process.env.PORT||4000,
-  () => console.log(`🚀 API en http://localhost:${process.env.PORT}`));
+app.listen(process.env.API_PORT || 4000,
+  () => console.log(`🚀 API en localhost:${process.env.API_PORT || 4000}`));

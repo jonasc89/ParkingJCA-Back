@@ -5,6 +5,7 @@ module.exports = {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
     database: process.env.DB_NAME,
     host:     process.env.DB_HOST,
     dialect:  'mysql'
@@ -12,6 +13,7 @@ module.exports = {
   test: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
     database: process.env.DB_NAME + '_test',
     host:     process.env.DB_HOST,
     dialect:  'mysql'
@@ -19,6 +21,7 @@ module.exports = {
   production: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
     database: process.env.DB_NAME,
     host:     process.env.DB_HOST,
     dialect:  'mysql'
