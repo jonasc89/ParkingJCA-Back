@@ -3,12 +3,12 @@ import mysql from 'mysql2/promise';
 import 'dotenv/config';
 
 export async function createDatabaseIfNotExists() {
-  const { DB_HOST,PORT, DB_USER, DB_PASS, DB_NAME } = process.env;
+  const { DB_HOST,DB_PORT, DB_USER, DB_PASS, DB_NAME } = process.env;
 
   // 1) Conectarse al servidor sin especificar DB
   const connection = await mysql.createConnection({
     host: DB_HOST,
-    port: PORT,
+    port: DB_PORT,
     user: DB_USER,
     password: DB_PASS
   });
