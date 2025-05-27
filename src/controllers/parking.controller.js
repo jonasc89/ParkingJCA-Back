@@ -19,6 +19,7 @@ export async function createEntry(req, res, next) {
   }
 }
 
+
 export async function closeEntry(req, res, next) {
   try {
     const record = await ParkingRecord.findByPk(req.params.id);
@@ -65,3 +66,18 @@ export async function listExits(_req,res,next){
     res.json(data);
   }catch(err){next(err);}
 }
+export async function obtenerPlacasActivas(req, res) {
+  try {
+    const placas = await ParkingRecord.findAll({
+      where: {
+        horaSalida: null
+      }
+    });
+
+    res.json({ placas });
+  } catch (error) {
+    console.error('Error al obtener placas activas:', error);
+    res.status(500).json({ msg: 'Error interno del servidor' });
+  }
+}
+
